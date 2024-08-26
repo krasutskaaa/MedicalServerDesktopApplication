@@ -18,6 +18,11 @@
                          x:Name="Card">
         <materialDesign:DialogHost CloseOnClickAway="True"
                                x:Name="DialogHost">
+            <Grid>
+                <StackPanel x:Name="LogInStackPanel" 
+                            Visibility="Visible" >
+                </StackPanel>
+            </Grid>
         </materialDesign:DialogHost>
     </materialDesign:Card>
 </Window>
