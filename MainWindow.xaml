@@ -47,6 +47,11 @@
                     <Image Margin="0 60 0 0" 
                            Source="Resources/hospital_logo.png"
                            Height="100"/>
+                    <TextBlock Margin="0 25 0 5"
+                               HorizontalAlignment="Center"
+                               FontSize="28"
+                               FontWeight="Bold"
+                               Text="Welcome Back!"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
