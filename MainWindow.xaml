@@ -44,6 +44,9 @@
                                     Click="CloseApplication"/>
                         </StackPanel>
                     </materialDesign:PopupBox>
+                    <Image Margin="0 60 0 0" 
+                           Source="Resources/hospital_logo.png"
+                           Height="100"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
