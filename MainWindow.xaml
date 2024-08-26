@@ -147,7 +147,7 @@
                 <StackPanel x:Name="CreateAccountStackPanel" 
                             Height="710" 
                             Width="400"
-                            Visibility="Visible">
+                            Visibility="Hidden">
                     <Image Margin="0 15 0 5"
                            Source="/Resources/hospital_logo.png"
                            Height="100"/>
@@ -222,6 +222,11 @@
                             </Button.Triggers>
                     </Button>
 
+                </StackPanel>
+                <StackPanel x:Name="GetDoctorsTestsWindow" 
+                            Height="710" 
+                            Width="400" 
+                            Visibility="Visible">
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
