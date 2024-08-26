@@ -105,6 +105,14 @@
                                FontSize="28"
                                FontWeight="Bold"
                                Text="Welcome to our team!"/>
+                    <TextBox Margin="0 15 0 0"
+                             x:Name="NameTextBox"
+                             Width="300"
+                             FontSize="18"
+                             BorderThickness="2"
+                             materialDesign:HintAssist.Hint="Enter name"
+                             BorderBrush="{DynamicResource MaterialDesignDevider}"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
