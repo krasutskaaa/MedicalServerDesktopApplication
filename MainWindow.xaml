@@ -282,11 +282,22 @@
                                                 IsReadOnly="True"
                                                 Width="*"
                                                 Binding="{Binding Date}"/>
-
+                            <DataGridTemplateColumn Header="Result"
+                                                    IsReadOnly="True"
+                                                    Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <RadioButton IsChecked="True" 
+                                                         Background="{Binding RadioButtonBackground}"
+                                                         BorderBrush="{Binding RadioButtonBorderBrush}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
-                
             </Grid>
         </materialDesign:DialogHost>
     </materialDesign:Card>
