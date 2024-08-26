@@ -97,6 +97,9 @@
                             Height="710" 
                             Width="400"
                             Visibility="Visible">
+                    <Image Margin="0 15 0 5"
+                           Source="/Resources/hospital_logo.png"
+                           Height="100"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
