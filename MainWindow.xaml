@@ -266,7 +266,19 @@
                                                 CanUserResize="False"
                                                 Width="auto"
                                                 Binding ="{Binding Number}"/>
-                            
+                            <DataGridTemplateColumn Header="Patient"
+                                                    CanUserResize="False"
+                                                    IsReadOnly="True"
+                                                    Width="170">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
