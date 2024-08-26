@@ -239,11 +239,19 @@
 
                     </Button>
                     <Label Margin="10 10 0 0"
-                           x:Name="DoctorNameLabel"
+                           x:Name="DoctorsNameLabel"
                            HorizontalAlignment="Left"
                            Width="376"
                            FontSize="18"
                            BorderThickness="2"
+                           Style="{StaticResource MaterialDesignLabel}"/>
+                    <Label Margin="10 5 0 0"
+                           x:Name="DoctorsSpecializationLabel"
+                           HorizontalAlignment="Left"
+                           Width="376"
+                           FontSize="14"
+                           BorderThickness="0 0 0 2"
+                           BorderBrush="{DynamicResource MaterialDesignDivider}"
                            Style="{StaticResource MaterialDesignLabel}"/>
                 </StackPanel>
                 
