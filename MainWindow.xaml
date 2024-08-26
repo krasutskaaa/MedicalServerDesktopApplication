@@ -12,6 +12,30 @@
         AllowsTransparency="True"
         WindowStyle="None"
         Title="MainWindow" Height="760" Width="450">
+    <Window.Resources>
+        <Storyboard x:Key="Storyboard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="LogInStackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.4"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.2"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LogInStackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CreateAccountStackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="CreateAccountStackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0.2"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.4"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0.6"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
     <materialDesign:Card UniformCornerRadius="15"
                          Background="{DynamicResource MaterialDesignPaper}"
                          Margin="25"
