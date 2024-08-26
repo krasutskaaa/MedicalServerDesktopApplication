@@ -20,7 +20,7 @@
                                x:Name="DialogHost">
             <Grid>
                 <StackPanel x:Name="LogInStackPanel" 
-                            Visibility="Visible" >
+                            Visibility="Hidden" >
                     <materialDesign:PopupBox HorizontalAlignment="Right"
                                              Margin ="0 20 20 0"
                                              StaysOpen="False"
@@ -92,6 +92,11 @@
                             FontSize="18"
                             Content="Create account">
                     </Button>
+                </StackPanel>
+                <StackPanel x:Name="CreateAccountStackPanel" 
+                            Height="710" 
+                            Width="400"
+                            Visibility="Visible">
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
