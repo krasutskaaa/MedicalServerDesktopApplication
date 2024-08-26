@@ -257,9 +257,17 @@
                                ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" 
                                CellStyle="{DynamicResource DataGridCellStyle1}"
                                Style="{DynamicResource DataGridStyle1}"
-                               x:Name="PatientsTestDataGrid"
+                               x:Name="PatientsTestsDataGrid"
                                Margin="0 15 0 0"
                                SelectionChanged="PatientsTestsDataGrid_OnSelectionChanged">
+                        <DataGrid.Columns >
+                            <DataGridTextColumn Header="#" 
+                                                IsReadOnly="True"
+                                                CanUserResize="False"
+                                                Width="auto"
+                                                Binding ="{Binding Number}"/>
+                            
+                        </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
                 
