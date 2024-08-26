@@ -223,11 +223,23 @@
                     </Button>
 
                 </StackPanel>
-                <StackPanel x:Name="GetDoctorsTestsWindow" 
+                <StackPanel x:Name="PatientsTestsStackPanel" 
                             Height="710" 
                             Width="400" 
                             Visibility="Visible">
+                    <Button Style="{StaticResource backwordsButton}"
+                            x:Name="ToLogInWindowButton"
+                            Width="42"
+                            Height="30"
+                            HorizontalAlignment="Left"
+                            Margin="20 20 0 0" 
+                            Click="OnBackwardsToLogInWindowButtonClicked">
+                                            <materialDesign:PackIcon Kind="ArrowLeftBoldCircle" 
+                                                             Style="{StaticResource buttonIcon}"/>
+
+                    </Button>
                 </StackPanel>
+                
             </Grid>
         </materialDesign:DialogHost>
     </materialDesign:Card>
