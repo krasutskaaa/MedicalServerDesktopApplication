@@ -113,6 +113,14 @@
                              materialDesign:HintAssist.Hint="Enter name"
                              BorderBrush="{DynamicResource MaterialDesignDevider}"
                              Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+                    <TextBox Margin="0 15 0 0"
+                             x:Name="UsernameTextBox2"
+                             Width="300"
+                             FontSize="18"
+                             BorderThickness="2"
+                             materialDesign:HintAssist.Hint="Enter username"
+                             BorderBrush="{DynamicResource MaterialDesignDevider}"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
