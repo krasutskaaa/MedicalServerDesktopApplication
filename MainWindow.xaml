@@ -253,6 +253,14 @@
                            BorderThickness="0 0 0 2"
                            BorderBrush="{DynamicResource MaterialDesignDivider}"
                            Style="{StaticResource MaterialDesignLabel}"/>
+                    <DataGrid  RowStyle="{DynamicResource DataGridRowStyle1}" 
+                               ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" 
+                               CellStyle="{DynamicResource DataGridCellStyle1}"
+                               Style="{DynamicResource DataGridStyle1}"
+                               x:Name="PatientsTestDataGrid"
+                               Margin="0 15 0 0"
+                               SelectionChanged="PatientsTestsDataGrid_OnSelectionChanged">
+                    </DataGrid>
                 </StackPanel>
                 
             </Grid>
