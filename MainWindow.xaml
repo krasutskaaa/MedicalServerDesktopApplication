@@ -64,6 +64,14 @@
                              materialDesign:HintAssist.Hint="Enter username"
                              BorderBrush="{DynamicResource MaterialDesignerDevider}"
                              Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+                    <PasswordBox Margin="0 20 0 0"
+                                 x:Name="PasswordTextBox1"
+                                 Width="300"
+                                 FontSize="18"
+                                 BorderThickness="2"
+                                 materialDesign:HintAssist.Hint="Enter password"
+                                 BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                 Style="{StaticResource MaterialDesignOutlinedRevealPasswordBox}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
