@@ -278,6 +278,10 @@
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Date" 
+                                                IsReadOnly="True"
+                                                Width="*"
+                                                Binding="{Binding Date}"/>
 
                         </DataGrid.Columns>
                     </DataGrid>
