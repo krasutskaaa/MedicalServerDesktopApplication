@@ -21,6 +21,29 @@
             <Grid>
                 <StackPanel x:Name="LogInStackPanel" 
                             Visibility="Visible" >
+                    <materialDesign:PopupBox HorizontalAlignment="Right"
+                                             Margin ="0 20 20 0"
+                                             StaysOpen="False"
+                                             Height="25"
+                                             PlacementMode="BottomAndAlignRightEdges">
+                        <StackPanel>
+                            <StackPanel Margin="16 10 0 6"
+                                        HorizontalAlignment="Center"
+                                        Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" Text="Dark Mode"/>
+                                <ToggleButton Cursor="Hand"
+                                              ToolTip="Enable dark mode"
+                                              Margin="12 0 8 0"
+                                              x:Name="themeToggle"
+                                              IsChecked="{Binding IsDarkTheme}"
+                                              Click="ToggleTheme"/>
+                            </StackPanel>
+                            <Button x:Name="ExitButton"
+                                    ToolTip="Close application"
+                                    Content="Exit"
+                                    Click="CloseApplication"/>
+                        </StackPanel>
+                    </materialDesign:PopupBox>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
