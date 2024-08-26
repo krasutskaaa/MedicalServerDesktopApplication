@@ -155,6 +155,17 @@
                             FontSize="18"
                             Content="Create account"
                             Click="OnCreateAccountClicked"/>
+                    <Button Margin="0 20 0 0"
+                            x:Name="LogInButton2"
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                            Height="53"
+                            Width="300"
+                            materialDesign:ButtonAssist.CornerRadius="10"
+                            FontSize="18"
+                            Content="Log In">
+                    </Button>
+
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
