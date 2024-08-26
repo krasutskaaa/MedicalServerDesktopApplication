@@ -52,6 +52,10 @@
                                FontSize="28"
                                FontWeight="Bold"
                                Text="Welcome Back!"/>
+                    <TextBlock HorizontalAlignment="Center"
+                               FontSize="17"
+                               FontWeight="SemiBold"
+                               Text="Log into your existing account"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
