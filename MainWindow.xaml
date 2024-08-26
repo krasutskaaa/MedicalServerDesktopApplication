@@ -56,6 +56,14 @@
                                FontSize="17"
                                FontWeight="SemiBold"
                                Text="Log into your existing account"/>
+                    <TextBox Margin="0 50 0 0"
+                             x:Name="UsernameTextBox1"
+                             Width="300"
+                             FontSize="18"
+                             BorderThickness="2"
+                             materialDesign:HintAssist.Hint="Enter username"
+                             BorderBrush="{DynamicResource MaterialDesignerDevider}"
+                             Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
