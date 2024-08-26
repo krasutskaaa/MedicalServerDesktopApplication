@@ -12,7 +12,12 @@
         AllowsTransparency="True"
         WindowStyle="None"
         Title="MainWindow" Height="760" Width="450">
-    <Grid>
-
-    </Grid>
+    <materialDesign:Card UniformCornerRadius="15"
+                         Background="{DynamicResource MaterialDesignPaper}"
+                         Margin="25"
+                         x:Name="Card">
+        <materialDesign:DialogHost CloseOnClickAway="True"
+                               x:Name="DialogHost">
+        </materialDesign:DialogHost>
+    </materialDesign:Card>
 </Window>
