@@ -115,6 +115,11 @@
                             materialDesign:ButtonAssist.CornerRadius="10"
                             FontSize="18"
                             Content="Create account">
+                            <Button.Triggers>
+                                <EventTrigger RoutedEvent="Button.Click">
+                                    <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+                                </EventTrigger>
+                            </Button.Triggers>
                     </Button>
                 </StackPanel>
                 <StackPanel x:Name="CreateAccountStackPanel" 
