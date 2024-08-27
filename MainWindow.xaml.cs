@@ -277,5 +277,17 @@ public partial class MainWindow : Window
         storyboard.Begin();
     }
 
+    private void OnBackwardsToLogInButtonClicked(object sender, RoutedEventArgs e)
+    {
+        MessageBoxResult result = MessageBox.Show("Do you want to log out?",
+            "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+        if (result == MessageBoxResult.Yes)
+        {
+
+            Storyboard storyboard = (Storyboard)this.Resources["Storyboard6"];
+            storyboard.Begin();
+        }
+    }
+
 }
 
