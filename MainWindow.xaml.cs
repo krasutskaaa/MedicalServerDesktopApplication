@@ -271,7 +271,7 @@ public partial class MainWindow : Window
         }
     }
 
-    private void OnBackwardsPatientsTestsButtonClicked(object sender, RoutedEventArgs e)
+    private void OnBackwardsToPatientsTestsButtonClicked(object sender, RoutedEventArgs e)
     {
         Storyboard storyboard = (Storyboard)this.Resources["Storyboard5"];
         storyboard.Begin();
