@@ -24,18 +24,27 @@ class DataService
 
     public async Task<Doctor> GetDoctorByUsernameAsync(string username)
     {
-        HttpResponseMessage response = await _httpClient.GetAsync($"doctors/{username}");
-        if (response.IsSuccessStatusCode)
+        try
         {
-            string json = await response.Content.ReadAsStringAsync();
+            HttpResponseMessage response = await _httpClient.GetAsync($"doctors/{username}");
+            if (response.IsSuccessStatusCode)
+            {
+                string json = await response.Content.ReadAsStringAsync();
 
-            Doctor? doctor = JsonConvert.DeserializeObject<Doctor>(json);
-            return doctor;
+                Doctor? doctor = JsonConvert.DeserializeObject<Doctor>(json);
+                return doctor;
+            }
+            else
+            {
+                return null;
+            }
         }
-        else
+        catch(Exception ex)
         {
+            Console.WriteLine($"An error occured: {ex.Message}");
             return null;
         }
+        
     }
 
     public async Task AddNewDoctorAsync(CreateDoctorDto newDoctor)
