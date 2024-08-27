@@ -49,15 +49,22 @@ class DataService
 
     public async Task AddNewDoctorAsync(CreateDoctorDto newDoctor)
     {
-        HttpResponseMessage response = await _httpClient.PostAsJsonAsync($"doctors", newDoctor);
-        if (response.IsSuccessStatusCode)
+        try
         {
-            MessageBox.Show($"A new account with {newDoctor.Username}" +
-                $"was sucessfuly created");
+            HttpResponseMessage response = await _httpClient.PostAsJsonAsync($"doctors", newDoctor);
+            if (response.IsSuccessStatusCode)
+            {
+                MessageBox.Show($"A new account with {newDoctor.Username}" +
+                    $"was sucessfuly created");
+            }
+            else
+            {
+                MessageBox.Show($"A new account creation failed");
+            }
         }
-        else
+        catch(Exception ex)
         {
-            MessageBox.Show($"A new account creation failed");
+            Console.WriteLine($"An error occured: {ex.Message}");
         }
 
     }
