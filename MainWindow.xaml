@@ -127,7 +127,7 @@
                                               Margin="12 0 8 0"
                                               x:Name="themeToggle"
                                               IsChecked="{Binding IsDarkTheme}"
-                                              Click="ToggleTheme"/>
+                                              Click="OnThemeToggled"/>
                             </StackPanel>
                             <Button x:Name="ExitButton"
                                     ToolTip="Close application"
