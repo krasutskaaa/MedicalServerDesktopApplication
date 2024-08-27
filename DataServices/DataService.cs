@@ -52,4 +52,19 @@ class DataService
         }
 
     }
+    public async Task<List<Test>> GetTestsByDoctorId(Guid doctorId)
+    {
+        HttpResponseMessage response = await _httpClient.GetAsync($"tests/by-doctorId/{doctorId}");
+        if (response.IsSuccessStatusCode)
+        {
+            string json = await response.Content.ReadAsStringAsync();
+
+            List<Test>? tests = JsonConvert.DeserializeObject<List<Test>>(json);
+            return tests;
+        }
+        else
+        {
+            return null;
+        }
+    }
 }
