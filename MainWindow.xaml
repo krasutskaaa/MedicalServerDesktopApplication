@@ -132,7 +132,7 @@
                             <Button x:Name="ExitButton"
                                     ToolTip="Close application"
                                     Content="Exit"
-                                    Click="CloseApplication"/>
+                                    Click="OnApplicationClosed"/>
                         </StackPanel>
                     </materialDesign:PopupBox>
                     <Image Margin="0 60 0 0" 
