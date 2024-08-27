@@ -334,6 +334,13 @@
                            FontSize="18"
                            BorderThickness="2"
                            Style="{StaticResource MaterialDesignLabel}"/>
+                    <Label Margin="10 5 0 0"
+                           x:Name="DateLabel"
+                           HorizontalAlignment="Left"
+                           Width="376"
+                           FontSize="14"
+                           BorderThickness="2"
+                           Style="{StaticResource MaterialDesignLabel}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
