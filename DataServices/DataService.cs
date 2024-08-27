@@ -93,17 +93,26 @@ class DataService
     }
     public async Task<Patient> GetPatientByIdAsync(Guid id)
     {
-        HttpResponseMessage response = await _httpClient.GetAsync($"patients/fullInfo/{id}");
-        if (response.IsSuccessStatusCode)
+        try
         {
-            string json = await response.Content.ReadAsStringAsync();
+            HttpResponseMessage response = await _httpClient.GetAsync($"patients/fullInfo/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                string json = await response.Content.ReadAsStringAsync();
 
-            Patient? patient = JsonConvert.DeserializeObject<Patient>(json);
-            return patient;
+                Patient? patient = JsonConvert.DeserializeObject<Patient>(json);
+                return patient;
+            }
+            else
+            {
+                return null;
+            }
         }
-        else
+        catch(Exception ex)
         {
+            Console.WriteLine($"An error occured: {ex.Message}");
             return null;
         }
+        
     }
 }
