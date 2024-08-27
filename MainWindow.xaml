@@ -368,6 +368,10 @@
                                                 IsReadOnly="True"
                                                 Width="*"
                                                 Binding="{Binding Value}"/>
+                            <DataGridTextColumn Header="Meas." 
+                                                IsReadOnly="True"
+                                                Width="*"
+                                                Binding="{Binding Measurement}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
