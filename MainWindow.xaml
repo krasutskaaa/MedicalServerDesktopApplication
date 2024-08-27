@@ -422,7 +422,7 @@
                             Height="30"
                             HorizontalAlignment="Left"
                             Margin="20 20 0 0"
-                            Click="OnBackwardsPatientsTestsButtonClicked">
+                            Click="OnBackwardsToPatientsTestsButtonClicked">
                                             <materialDesign:PackIcon Kind="ArrowLeftBoldCircle" 
                                                                      Style="{StaticResource buttonIcon}"/>
 
