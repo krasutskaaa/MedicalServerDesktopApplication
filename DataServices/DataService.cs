@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using SharedLibrary.Abstractions.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -15,5 +17,21 @@ class DataService
     {
         _httpClient = new HttpClient();
         _httpClient.BaseAddress = new Uri(url);
+    }
+
+    public async Task<Doctor> GetDoctorByUsernameAsync(string username)
+    {
+        HttpResponseMessage response = await _httpClient.GetAsync($"doctors/{username}");
+        if (response.IsSuccessStatusCode)
+        {
+            string json = await response.Content.ReadAsStringAsync();
+
+            Doctor? doctor = JsonConvert.DeserializeObject<Doctor>(json);
+            return doctor;
+        }
+        else
+        {
+            return null;
+        }
     }
 }
