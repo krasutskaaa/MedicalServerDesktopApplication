@@ -52,7 +52,7 @@ class DataService
         }
 
     }
-    public async Task<List<Test>> GetTestsByDoctorId(Guid doctorId)
+    public async Task<List<Test>> GetTestsByDoctorIdAsync(Guid doctorId)
     {
         HttpResponseMessage response = await _httpClient.GetAsync($"tests/by-doctorId/{doctorId}");
         if (response.IsSuccessStatusCode)
@@ -61,6 +61,21 @@ class DataService
 
             List<Test>? tests = JsonConvert.DeserializeObject<List<Test>>(json);
             return tests;
+        }
+        else
+        {
+            return null;
+        }
+    }
+    public async Task<Patient> GetPatientByIdAsync(Guid id)
+    {
+        HttpResponseMessage response = await _httpClient.GetAsync($"patients/fullInfo/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            string json = await response.Content.ReadAsStringAsync();
+
+            Patient? patient = JsonConvert.DeserializeObject<Patient>(json);
+            return patient;
         }
         else
         {
