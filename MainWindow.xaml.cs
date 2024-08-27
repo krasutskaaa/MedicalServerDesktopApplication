@@ -15,6 +15,8 @@ using SharedLibrary.Encryption;
 using CourseworkMedicalServerDesktopApplication.DataServices;
 using CourseworkMedicalServerDesktopApplication.WindowEntities;
 using System.Collections.ObjectModel;
+using System.Windows.Controls.Primitives;
+using MaterialDesignThemes.Wpf;
 namespace CourseworkMedicalServerDesktopApplication;
 
 /// <summary>
@@ -24,10 +26,13 @@ namespace CourseworkMedicalServerDesktopApplication;
 
 public partial class MainWindow : Window
 {
+    public bool IsDarkTheme { get; set; }
+    private readonly PaletteHelper _palleteHelper;
     private Doctor _doctor;
     private List<Test> _patientsTests;
     public MainWindow()
     {
+        _palleteHelper = new PaletteHelper();
         InitializeComponent();
     }
     private async void OnCreateAccountClicked(object sender, RoutedEventArgs e)
@@ -161,6 +166,20 @@ public partial class MainWindow : Window
         System.Windows.Application.Current.Shutdown();
     }
 
-
+    private void OnThemeToggled(object sender, RoutedEventArgs e)
+    {
+        ITheme theme = _palleteHelper.GetTheme();
+        if (theme.GetBaseTheme() == BaseTheme.Dark)
+        {
+            IsDarkTheme = false;
+            theme.SetBaseTheme(Theme.Light);
+        }
+        else
+        {
+            IsDarkTheme = true;
+            theme.SetBaseTheme(Theme.Dark);
+        }
+        _palleteHelper.SetTheme(theme);
+    }
 } 
 
