@@ -364,6 +364,10 @@
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Value" 
+                                                IsReadOnly="True"
+                                                Width="*"
+                                                Binding="{Binding Value}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
