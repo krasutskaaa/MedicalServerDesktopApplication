@@ -341,6 +341,13 @@
                            FontSize="14"
                            BorderThickness="2"
                            Style="{StaticResource MaterialDesignLabel}"/>
+                    <DataGrid  RowStyle="{DynamicResource DataGridRowStyle1}" 
+                               ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" 
+                               CellStyle="{DynamicResource DataGridCellStyle1}"
+                               Style="{DynamicResource DataGridStyle1}"
+                               x:Name="PatientsTestsDataDataGrid2"
+                               Margin="0 15 0 0" >
+                    </DataGrid>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
