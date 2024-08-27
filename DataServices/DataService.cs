@@ -1,11 +1,14 @@
 ﻿using Newtonsoft.Json;
 using SharedLibrary.Abstractions.Entities;
+using SharedLibrary.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace CourseworkMedicalServerDesktopApplication.DataServices;
 
@@ -33,5 +36,20 @@ class DataService
         {
             return null;
         }
+    }
+
+    public async Task AddNewDoctorAsync(CreateDoctorDto newDoctor)
+    {
+        HttpResponseMessage response = await _httpClient.PostAsJsonAsync($"doctors", newDoctor);
+        if (response.IsSuccessStatusCode)
+        {
+            MessageBox.Show($"A new account with {newDoctor.Username}" +
+                $"was sucessfuly created");
+        }
+        else
+        {
+            MessageBox.Show($"A new account creation failed");
+        }
+
     }
 }
