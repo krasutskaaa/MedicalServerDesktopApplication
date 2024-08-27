@@ -226,7 +226,7 @@
                 <StackPanel x:Name="PatientsTestsStackPanel" 
                             Height="710" 
                             Width="400" 
-                            Visibility="Visible">
+                            Visibility="Hidden">
                     <Button Style="{StaticResource backwordsButton}"
                             x:Name="ToLogInWindowButton"
                             Width="42"
@@ -297,6 +297,11 @@
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
+                </StackPanel>
+                <StackPanel x:Name="PatientsTestsDataStackPanel" 
+                            Height="710" 
+                            Width="400" 
+                            Visibility="Visible">
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
