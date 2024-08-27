@@ -156,6 +156,11 @@ public partial class MainWindow : Window
         }
     }
 
+    private void OnCloseApplication(object sender, RoutedEventArgs e)
+    {
+        System.Windows.Application.Current.Shutdown();
+    }
+
 
 } 
 
