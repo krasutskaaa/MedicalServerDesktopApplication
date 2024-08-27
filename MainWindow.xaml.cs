@@ -270,5 +270,12 @@ public partial class MainWindow : Window
             PatientsTestsDataDataGrid2.ItemsSource = patientsTestDataCollection;
         }
     }
-} 
+
+    private void OnBackwardsPatientsTestsButtonClicked(object sender, RoutedEventArgs e)
+    {
+        Storyboard storyboard = (Storyboard)this.Resources["Storyboard5"];
+        storyboard.Begin();
+    }
+
+}
 
