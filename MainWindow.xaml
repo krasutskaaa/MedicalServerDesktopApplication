@@ -319,6 +319,14 @@
                            FontSize="18"
                            BorderThickness="2"
                            Style="{StaticResource MaterialDesignLabel}"/>
+                    <Label Margin="10 5 0 0"
+                           x:Name="DoctorsSpecializationLabel2"
+                           HorizontalAlignment="Left"
+                           Width="376"
+                           FontSize="14"
+                           BorderThickness="0 0 0 2"
+                           BorderBrush="{DynamicResource MaterialDesignDivider}"
+                           Style="{StaticResource MaterialDesignLabel}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
