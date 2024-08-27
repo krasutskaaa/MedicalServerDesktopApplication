@@ -181,5 +181,94 @@ public partial class MainWindow : Window
         }
         _palleteHelper.SetTheme(theme);
     }
+
+    private async void PatientsTestsDataGridOnSelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (PatientsTestsDataGrid.SelectedItem != null)
+        {
+
+            var apiMethod = new DataService("http://localhost:5235/");
+            var converter = new BrushConverter();
+            var selectedPatientTest = (PatientsTests)PatientsTestsDataGrid.SelectedItem;
+            string patientName = selectedPatientTest.Name;
+            string patientTestDate = selectedPatientTest.Date;
+            Storyboard storyboard = (Storyboard)this.Resources["Storyboard4"];
+            storyboard.Begin();
+
+            DoctorsNameLabel2.Content = new TextBlock
+            {
+                Inlines =
+                    {
+                        new Run("Doctor's name: "){FontWeight = FontWeights.Bold },
+                        new Run(_doctor.Name)
+                    }
+            };
+            DoctorsSpecializationLabel2.Content = new TextBlock
+            {
+                Inlines =
+                    {
+                        new Run("Doctor's specialization: "){FontWeight = FontWeights.Bold },
+                        new Run( _doctor.Specialization)
+                    }
+            };
+            PatientsNameLabel2.Content = new TextBlock
+            {
+                Inlines =
+                    {
+                        new Run("Patient's name: "){FontWeight = FontWeights.Bold },
+                        new Run(patientName)
+                    }
+            };
+            DateLabel.Content = new TextBlock
+            {
+                Inlines =
+                    {
+                        new Run("Test date: "){FontWeight = FontWeights.Bold },
+                        new Run(patientTestDate)
+                    }
+            };
+            PatientsTestsDataGrid.SelectedItem = null;
+
+            ObservableCollection<PatientsTestData> patientsTestDataCollection =
+                new ObservableCollection<PatientsTestData>();
+            List<Test> currentPatientTests = new List<Test>();
+            foreach (var test in _patientsTests)
+            {
+                var patient = await apiMethod.GetPatientByIdAsync(test.PatientId);
+                if (patient.Name.Equals(patientName) &&
+                    test.CreatedAt.Date.ToString("yy-MM-dd").Equals(patientTestDate))
+                {
+                    currentPatientTests.Add(test);
+                }
+            }
+
+            foreach (var currentPatientTest in currentPatientTests)
+            {
+                int count = 0;
+                ++count;
+                var patientsTestData = new PatientsTestData
+                {
+                    Number = count.ToString(),
+                    Name = currentPatientTest.Name,
+                    Value = currentPatientTest.Value,
+                    Measurement = currentPatientTest.UMeasurement,
+                };
+                if (currentPatientTest.Value < currentPatientTest.MinValue ||
+                    currentPatientTest.Value > currentPatientTest.MaxValue)
+                {
+                    patientsTestData.RadioButtonBorderBrush = (Brush)converter.ConvertFromString("#AD1010");
+                    patientsTestData.RadioButtonBackground = (Brush)converter.ConvertFromString("#AD1010");
+                }
+                else
+                {
+                    patientsTestData.RadioButtonBorderBrush = (Brush)converter.ConvertFromString("#318B0A");
+                    patientsTestData.RadioButtonBackground = (Brush)converter.ConvertFromString("#318B0A");
+                }
+                patientsTestDataCollection.Add(patientsTestData);
+            }
+
+            PatientsTestsDataDataGrid2.ItemsSource = patientsTestDataCollection;
+        }
+    }
 } 
 
