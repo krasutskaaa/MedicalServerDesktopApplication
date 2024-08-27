@@ -327,6 +327,13 @@
                            BorderThickness="0 0 0 2"
                            BorderBrush="{DynamicResource MaterialDesignDivider}"
                            Style="{StaticResource MaterialDesignLabel}"/>
+                    <Label Margin="10 10 0 0"
+                           x:Name="PatientsNameLabel2"
+                           HorizontalAlignment="Left"
+                           Width="376"
+                           FontSize="18"
+                           BorderThickness="2"
+                           Style="{StaticResource MaterialDesignLabel}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:DialogHost>
