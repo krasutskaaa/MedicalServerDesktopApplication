@@ -353,6 +353,17 @@
                                                 CanUserResize="False"
                                                 Width="auto"
                                                 Binding ="{Binding Number}"/>
+                            <DataGridTemplateColumn Header="Name"
+                                                    CanUserResize="False"
+                                                    IsReadOnly="True">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </StackPanel>
