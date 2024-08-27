@@ -43,8 +43,7 @@ class DataService
         {
             Console.WriteLine($"An error occured: {ex.Message}");
             return null;
-        }
-        
+        }   
     }
 
     public async Task AddNewDoctorAsync(CreateDoctorDto newDoctor)
@@ -70,18 +69,27 @@ class DataService
     }
     public async Task<List<Test>> GetTestsByDoctorIdAsync(Guid doctorId)
     {
-        HttpResponseMessage response = await _httpClient.GetAsync($"tests/by-doctorId/{doctorId}");
-        if (response.IsSuccessStatusCode)
+        try
         {
-            string json = await response.Content.ReadAsStringAsync();
+            HttpResponseMessage response = await _httpClient.GetAsync($"tests/by-doctorId/{doctorId}");
+            if (response.IsSuccessStatusCode)
+            {
+                string json = await response.Content.ReadAsStringAsync();
 
-            List<Test>? tests = JsonConvert.DeserializeObject<List<Test>>(json);
-            return tests;
+                List<Test>? tests = JsonConvert.DeserializeObject<List<Test>>(json);
+                return tests;
+            }
+            else
+            {
+                return null;
+            }
         }
-        else
+        catch(Exception ex)
         {
+            Console.WriteLine($"An error occured: {ex.Message}");
             return null;
         }
+        
     }
     public async Task<Patient> GetPatientByIdAsync(Guid id)
     {
