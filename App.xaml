@@ -132,6 +132,22 @@
                 </Setter>
             </Style>
 
+            <Style x:Key="DataGridCellStyle1" TargetType="{x:Type DataGridCell}">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                <Setter Property="Margin" Value="15 0" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type DataGridCell}">
+                            <Border Background="{TemplateBinding Background}" BorderThickness="0" SnapsToDevicePixels="True">
+                                <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
 
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
