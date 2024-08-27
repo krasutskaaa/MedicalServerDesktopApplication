@@ -327,7 +327,7 @@
                                Style="{DynamicResource DataGridStyle1}"
                                x:Name="PatientsTestsDataGrid"
                                Margin="0 15 0 0"
-                               SelectionChanged="PatientsTestsDataGrid_OnSelectionChanged">
+                               SelectionChanged="PatientsTestsDataGridOnSelectionChanged">
                         <DataGrid.Columns >
                             <DataGridTextColumn Header="#" 
                                                 IsReadOnly="True"
