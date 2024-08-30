@@ -86,9 +86,10 @@ public partial class MainWindow : Window
             _doctor.Password.Equals(PasswordTextBox1
             .Password.GenerateSHA256()))
         {
-
+            
             Storyboard storyboard = (Storyboard)this.Resources["Storyboard3"];
             storyboard.Begin();
+            PasswordTextBox1.BorderBrush = (Brush)converter.ConvertFromString("#E8E8E8");
             UsernameTextBox1.Clear();
             PasswordTextBox1.Clear();
             DoctorsNameLabel.Content = new TextBlock
@@ -165,6 +166,9 @@ public partial class MainWindow : Window
         {
             PasswordTextBox1.BorderBrush = (Brush)converter.ConvertFromString("#AD1010");
         }
+        
+
+        
     }
 
     private void OnApplicationClosed(object sender, RoutedEventArgs e)
