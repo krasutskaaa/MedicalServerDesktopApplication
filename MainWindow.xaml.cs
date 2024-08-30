@@ -17,6 +17,7 @@ using CourseworkMedicalServerDesktopApplication.WindowEntities;
 using System.Collections.ObjectModel;
 using System.Windows.Controls.Primitives;
 using MaterialDesignThemes.Wpf;
+using System;
 namespace CourseworkMedicalServerDesktopApplication;
 
 /// <summary>
@@ -78,6 +79,7 @@ public partial class MainWindow : Window
     }
     private async void OnLogInClicked(object sender, RoutedEventArgs e)
     {
+        var converter = new BrushConverter();
         var apiMethod = new DataService("http://localhost:5235/");
         _doctor = await apiMethod.GetDoctorByUsernameAsync(UsernameTextBox1.Text);
         if (_doctor != null &&
@@ -109,7 +111,6 @@ public partial class MainWindow : Window
 
             if (_patientsTests is not null)
             {
-                var converter = new BrushConverter();
                 ObservableCollection<PatientsTests> patientsTestsCollection
                     = new ObservableCollection<PatientsTests>();
                 var tasks = _patientsTests.Select(async test =>
@@ -158,6 +159,11 @@ public partial class MainWindow : Window
 
                 PatientsTestsDataGrid.ItemsSource = patientsTestsCollection;
             }
+        }
+
+        else
+        {
+            PasswordTextBox1.BorderBrush = (Brush)converter.ConvertFromString("#AD1010");
         }
     }
 

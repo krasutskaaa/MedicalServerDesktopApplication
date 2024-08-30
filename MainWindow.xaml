@@ -68,10 +68,10 @@
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GetDoctorsTestsWindow" Storyboard.TargetProperty="(UIElement.Visibility)">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsStackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="GetDoctorsTestsWindow" Storyboard.TargetProperty="(UIElement.Opacity)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsStackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0.2"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.4"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0.6"/>
@@ -80,21 +80,21 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Storyboard4">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="GetDoctorsTestsWindow" Storyboard.TargetProperty="(UIElement.Opacity)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsStackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.8"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.6"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.4"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.2"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GetDoctorsTestsWindow" Storyboard.TargetProperty="(UIElement.Visibility)">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsStackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GetPatientsTestsWindow" Storyboard.TargetProperty="(UIElement.Visibility)">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsDataStackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="GetPatientsTestsWindow" Storyboard.TargetProperty="(UIElement.Opacity)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsDataStackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0.2"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.4"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0.6"/>
@@ -103,38 +103,38 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Storyboard5">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="GetPatientsTestsWindow" Storyboard.TargetProperty="(UIElement.Opacity)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsDataStackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.8"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.6"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.4"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.2"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GetPatientsTestsWindow" Storyboard.TargetProperty="(UIElement.Visibility)">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsDataStackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="GetDoctorsTestsWindow" Storyboard.TargetProperty="(UIElement.Opacity)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsStackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0.2"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.4"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0.6"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0.8"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GetDoctorsTestsWindow" Storyboard.TargetProperty="(UIElement.Visibility)">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsStackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="Storyboard6">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="GetDoctorsTestsWindow" Storyboard.TargetProperty="(UIElement.Opacity)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsStackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.8"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.6"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.4"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.2"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GetDoctorsTestsWindow" Storyboard.TargetProperty="(UIElement.Visibility)">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsStackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
@@ -161,14 +161,14 @@
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Visible}"/>
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="GetDoctorsTestsWindow" Storyboard.TargetProperty="(UIElement.Opacity)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsStackPanel" Storyboard.TargetProperty="(UIElement.Opacity)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0.2"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.4"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0.6"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0.8"/>
                 <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="GetDoctorsTestsWindow" Storyboard.TargetProperty="(UIElement.Visibility)">
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PatientsTestsStackPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
                 <DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Visible}"/>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
@@ -181,7 +181,7 @@
                                x:Name="DialogHost">
             <Grid>
                 <StackPanel x:Name="LogInStackPanel" 
-                            Visibility="Hidden" >
+                            Visibility="Visible" >
                     <materialDesign:PopupBox HorizontalAlignment="Right"
                                              Margin ="0 20 20 0"
                                              StaysOpen="False"
@@ -416,7 +416,7 @@
                 <StackPanel x:Name="PatientsTestsDataStackPanel" 
                             Height="710" 
                             Width="400" 
-                            Visibility="Visible">
+                            Visibility="Hidden">
                     <Button Style="{StaticResource backwordsButton}" 
                             Width="42"
                             Height="30"
